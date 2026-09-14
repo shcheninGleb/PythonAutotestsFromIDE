@@ -1,2 +1,2 @@
 a = 'sadasd'
-print (a)
+print (a, a)
