@@ -1,0 +1,2 @@
+a = 'sadasd'
+print (a)
