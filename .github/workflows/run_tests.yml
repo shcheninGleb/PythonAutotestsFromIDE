@@ -1,1 +1,30 @@
+name: Run autotests
 
+
+on:
+  workflow_dispatch: 
+    inputs:
+      deploymenttarget:
+        description: select tests for run
+        required: true
+        type: choice
+        default: all
+        options:
+          - all
+jobs:
+  run_tests:
+    runs-on:
+      - windows-latest
+    name: Tests
+    steps:
+      - name: Copy sourse code
+        uses: actions/checkout@v4
+      - name: Set up Python env
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Run tests
+        run: pytest -v
+        
