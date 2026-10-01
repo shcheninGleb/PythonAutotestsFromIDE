@@ -1,0 +1,9 @@
+#запустить фопределенный тест из проекта
+# pytest -v -s test_demo.py
+#запустить определенный тест из файла
+# pytest -v -s test_demo.py::test1
+
+# тестовые сайты
+# https://magento.softwaretestingboard.com/
+# https://demoblaze.com/
+# qa-practice.com
